@@ -1,0 +1,15 @@
+﻿@model Products.Web_App.Entities.SendMessage
+@{
+    ViewData["Title"] = "SendEmail";
+}
+
+
+
+<div style="direction: rtl; padding: 20px">
+    <h2>@Model.FullName عزیز !</h2>
+    <p>یک ایمیل برای شما شد,@Model.Text </p>
+    <p>
+        <a href="http://localhost:54690/Productts/SendMessage/@Model.SendId">فعالسازی حساب کاربری</a>
+    </p>
+</div>
+

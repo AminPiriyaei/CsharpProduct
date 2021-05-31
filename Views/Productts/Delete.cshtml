@@ -1,0 +1,50 @@
+﻿@model Products.Web_App.Entities.Productt
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>عملیات حذف</h2>
+
+<h3>آیا از حذف این محصول مطمئن هستید؟</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageName)
+        </dt>
+        <dd>
+            <img src="/Product/Image/@Model.ImageName" class="thumbnail" style="max-width: 150px" />
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.createdate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.createdate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProductId" />
+        <input type="submit" value="حذف" class="btn btn-warning" /> |
+        <a asp-action="Index">برگشت به لیست اصلی</a>
+    </form>
+</div>
